@@ -12,11 +12,25 @@ let oneEuroIs = {
     "GBP": 0.87, // British pound
 }
 
-// Function to convert from Euro to Dollar
-function fromEuroToDollar(euro) {
-    return euro * oneEuroIs.USD;
+const fromEuroToDollar = function(valueInEuro) {
+    // Convert the given valueInEuro to dollars
+    let valueInDollar = valueInEuro * 1.07;
+    // return the dollar value
+    return valueInDollar;
+}
+const fromYenToPound = function(valueInYen) {
+    
+    let valueInPound = valueInYen * 0.87;
+    // return the dollar value
+    return valueInPound;
 }
 
+const fromDollartoYen = function(valueInDollar) {
+    // Convert the given valueInEuro to dollars
+    let valueInYen = valueInDollar * 156.5;
+    // return the dollar value
+    return valueInYen;
+}
 // Example sum function (if it exists)
 function sum(a, b) {
     return a + b;
@@ -30,4 +44,4 @@ function sum(a, b) {
 
 
 // We include fromEuroToDollar here as well because it needs to be exported
-module.exports = { sum, fromEuroToDollar };
+module.exports = { sum, fromEuroToDollar, fromYenToPound, fromDollartoYen};
